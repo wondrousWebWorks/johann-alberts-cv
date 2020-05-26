@@ -1,0 +1,16 @@
+$primary-theme-color: cadetblue;
+$off-white-color: #f4f4f4;
+$dark-grey-color: #222;
+
+
+.shift-left, .shift-right {
+    transition: transform .5s ease-in-out;
+}
+
+.shift-left:hover {
+    transform: translateX(-2rem);
+}
+
+.shift-right:hover {
+    transform: translateX(2rem);
+}

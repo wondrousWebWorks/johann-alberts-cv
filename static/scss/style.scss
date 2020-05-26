@@ -1,0 +1,59 @@
+@import 'config';
+@import 'mixins';
+
+body {
+    font-size: 16px;
+    position: relative;
+    background-color: $off-white-color;
+    color: $dark-grey-color;
+}
+
+header {
+    position: relative;
+    height: 250px;
+    background-color: $primary-theme-color;
+    color: $off-white-color;
+    margin-bottom: 1rem;
+    box-shadow: 10px 10px 40px #333;
+
+    h1 {
+        display: inline-block;
+        margin: 0 auto;
+        padding: .5rem 2rem 1rem;
+        font-size: 6rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translateY(-50%);
+        @include text-shadow(3px 3px #333);
+        border: .5rem solid #f4f4f4;
+        border-radius: .5rem;
+    }
+}
+
+#profile-paragraph {
+    text-align: justify;
+}
+
+#experience {
+    .experience-heading {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & h3 {
+            font-size: 1.5rem;
+        }
+
+        & .job-title {
+            width: 60%;
+        }
+    }
+
+    & h4 {
+        font-size: 1.3rem;
+    }
+}
