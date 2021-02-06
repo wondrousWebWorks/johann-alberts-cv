@@ -4,48 +4,86 @@
 body {
     font-size: 16px;
     position: relative;
-    background-color: $off-white-color;
+    // background-color: $off-white-color;
     color: $dark-grey-color;
 }
 
 header {
     position: relative;
-    height: 250px;
-    background-color: $primary-theme-color;
+    background-color: darken($primary-theme-color, 15);
+    background-repeat: repeat;
     color: $off-white-color;
-    margin-bottom: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
     box-shadow: 10px 10px 40px #333;
 
     h1 {
-        display: inline-block;
-        margin: 0 auto;
+        display: block;
+        // margin: 0 auto;
+        margin-bottom: 0;
         padding: .5rem 2rem 1rem;
-        font-size: 6rem;
+        font-size: 4rem;
         text-align: center;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        transform: translateY(-50%);
+        // position: absolute;
+        // top: 50%;
+        // left: 0;
+        // right: 0;
+        // transform: translateY(-50%);
         @include text-shadow(3px 3px #333);
-        border: .5rem solid #f4f4f4;
-        border-radius: .5rem;
     }
+
+    hr {
+        width: 50%;
+        margin: auto;
+        background-color: $off-white-color;
+    }
+
+    .header-links {
+        margin-top: 1rem;
+    }
+
+    p {
+        font-size: 1.2rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    a {
+        color: $off-white-color;
+        text-decoration: underline;
+        transition: color .5s ease-in-out;
+
+        &:hover {
+            color: $secondary-theme-color;
+        }
+    }
+}
+
+h2 {
+    background: linear-gradient(to right, darken($primary-theme-color, 15), $primary-theme-color, white);
+    color: $off-white-color;
+    padding: .4rem .8rem;
+    margin-top: 1rem;
+    border-radius: 5px;
 }
 
 #profile-paragraph {
     text-align: justify;
 }
 
-#experience {
-    .experience-heading {
+article {
+    .sub-section-heading-wrapper {
         width: 100%;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
+        .sub-section-heading {
+            width: 70%;
+        }
+        
         & h3 {
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         & .job-title {
@@ -53,7 +91,69 @@ header {
         }
     }
 
-    & h4 {
-        font-size: 1.3rem;
+    hr {
+        background-color: darken($dark-grey-color, 10);
     }
+
+    h4 {
+        font-size: 1.15rem;
+    }
+
+    .grey-text {
+        color: lighten($dark-grey-color, 20);
+    }
+}
+
+#skills {
+    h2 {
+        margin-bottom: 1.5rem;
+    }
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        li {
+            background-color: darken($primary-theme-color, 15);
+            border-radius: 5px;
+            color: $off-white-color;
+            padding: .4rem .8rem;
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+            font-weight: bold;
+            font-size: 1.3rem;
+            transition: transform .5s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+#projects {
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    li {
+        font-size: 1.5rem;
+
+        a {
+            text-decoration: none;
+            color: lighten($dark-grey-color, 20);
+            font-size: 2rem;
+            // margin-right: .3rem;
+        }
+    }
+}
+
+#references {
+    font-size: 1.5rem;
+    margin-top: 2rem;
 }
